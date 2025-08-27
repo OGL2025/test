@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PNG Grid Limited</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PNG Grid Limited - Powering Papua New Guinea with reliable consulting, energy, and infrastructure services.">
+  <meta name="theme-color" content="#00405D" media="(prefers-color-scheme:light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme:dark)">
+
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html, body {
+      background-color: #555;
+      margin: 0;
+      font-size: 9pt;
+      color: #000;
+      font-family: Verdana, Arial, Helvetica, Roboto, sans-serif;
+      line-height: 135%;
+    }
+
+    #outer-wrap {
+      position: relative;
+      max-width: 990px;
+      margin: 0 auto;
+      background-color: #888;
+    }
+
+	header {
+	  background: url("logo.png") no-repeat center center;
+	  background-size: 100% 100%;   /* stretch image fully to header */
+	  height: 150px;                /* adjust header height */
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: flex-end;    /* keep nav at bottom */
+	}
+
+
+    nav#topnav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(0,40,69,1);
+    }
+
+    nav#topnav a {
+      text-decoration: none;
+      font-size: 11pt;
+	  //font-weight: bold;#00FFFF;
+      color: white;
+    }
+	nav#topnav a:hover {
+		background-color: cyan; /* translucent cyan highlight */
+		border-radius: 0px; /* optional rounded edges */
+		transition: background-color 0.3s;
+		color: black;
+	}
+
+    #intro1 {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    #blurbg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-position: center;
+      background-size: cover;
+      filter: blur(0px);
+    }
+
+    #intro3 {
+      position: relative;
+      background-color: rgba(0,70,99,.75);
+      padding: 60px 4%;
+      text-align: center;
+    }
+
+	header h1 {
+	  margin: 0;                  
+	  padding: 60px;              
+	  font-size: 25px;            /* bigger for strong effect */
+	  text-align: center;         
+	  color: rgba(199, 150, 43, 1);   /* brownish-orange */         /* main text color */
+	  font-weight: bold;
+
+	  /* black edges (stroke) */
+	  -webkit-text-stroke: 1px black;
+
+	  /* shading (drop shadow) */
+	  /*text-shadow: 0px 0px 0px rgba(0, 0, 0);*/
+	}
+
+
+    a.btn {
+      background-color: rgba(12,12,12,.7);
+      color: #fff !important;
+      padding: 8px 20px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-size: 11pt;
+      display: inline-block;
+      margin-top: 20px;
+    }
+	a.btn:hover {
+		background-color: cyan;
+		transition: background-color 0.3s;
+		color: #000 !important;  
+	}
+
+    .boxwhite {
+      background-color: #e2e2e2;
+      padding: 30px;
+      text-align: center;
+    }
+
+    footer {
+      background: rgba(0,40,69,1);
+      padding: 50px;
+      font-size: 8pt;
+      text-align: center;
+	  color: #668899;  /* added this */
+    }
+
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #668899;
+    }
+	footer a:hover {
+		//background-color: cyan; /* translucent cyan highlight */
+		//border-radius: 0px; /* optional rounded edges */
+		//transition: background-color 0.3s;
+		color: white;
+	}
+    @media (max-width: 630px) {
+      h1 { font-size: 20pt; }
+      nav#topnav { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div id="outer-wrap">
+    <header>
+	<h1>PNG GRID LIMITED</h1>
+      <nav id="topnav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div id="intro1">
+        <div id="blurbg" style="background-image:url('bg.png');"></div>
+        <div id="intro3">
+          <!--<h1>PNG Grid Limited</h1>-->
+          <p>Powering Papua New Guinea with reliable consulting, energy, and infrastructure solutions.</p>
+          <a class="btn" href="services.html">Explore Our Services</a>
+        </div>
+      </div>
+<div class="boxwhite">
+  <!--<h2>Our Project Areas</h2>-->
+  <p>
+    PNG Grid Limited is committed to delivering modern, sustainable, and innovative solutions 
+    for Papua New Guinea's infrastructure and energy needs.
+  </p>
+  <!-- Centered map with border -->
+  <div style="display:flex; justify-content:center; margin:20px 0;">
+    <div id="map" style="
+        height:400px; 
+        width:100%; 
+        border-radius:0px; 
+        border:1px solid #000; 
+      ">
+    </div>
+  </div>
+
+  <p>
+    PNG Grid Limited is committed to delivering modern, sustainable, and innovative solutions 
+    for Papua New Guinea's infrastructure and energy needs.
+  </p>
+</div>
+	<!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+	<!-- Leaflet JS -->
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+	<script>
+	  // Initialize map centered on Papua New Guinea
+	  var map = L.map('map').setView([-6.314993, 143.95555], 6);
+
+	  // Add OpenStreetMap base layer
+	  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; OpenStreetMap contributors'
+	  }).addTo(map);
+
+	  // Example project markers
+	  L.marker([-9.4438, 147.1803]).addTo(map)  // Port Moresby
+		.bindPopup("<b>Port Moresby Project</b><br>Energy Upgrade");
+
+	  L.marker([-5.8450, 144.2167]).addTo(map)  // Mt. Hagen
+		.bindPopup("<b>Western Highlands Project</b><br>Grid Extension");
+
+	  L.marker([-6.7320, 146.9999]).addTo(map)  // Lae
+		.bindPopup("<b>Lae Project</b><br>Infrastructure Development");
+	</script>
+	<!--------------------------->
+    </main>
+
+	<footer>
+	  <a href="https://www.facebook.com/YourPage" target="_blank" style="margin-right:10px; text-decoration:none;">Facebook</a>
+	  <a href="https://wa.me/YourNumber" target="_blank" style="margin-right:10px; text-decoration:none;">WhatsApp</a>
+	  <br>
+
+	  © PNG Grid Limited, All Rights Reserved<br>
+	  <a href="about.html">About Us</a> |
+	  <a href="privacy.html">Privacy Policy</a> |
+	  <a href="contact.html">Contact</a>
+	</footer>
+
+  </div>
+</body>
+</html>

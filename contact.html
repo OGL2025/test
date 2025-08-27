@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PNG Grid Limited - Contact</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PNG Grid Limited - Powering Papua New Guinea with reliable consulting, energy, and infrastructure services.">
+  <meta name="theme-color" content="#00405D" media="(prefers-color-scheme:light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme:dark)">
+
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    html, body {
+      background-color: #555;
+      margin: 0;
+      font-size: 9pt;
+      color: #000;
+      font-family: Verdana, Arial, Helvetica, Roboto, sans-serif;
+      line-height: 135%;
+    }
+
+    #outer-wrap {
+      position: relative;
+      max-width: 990px;
+      margin: 0 auto;
+      background-color: #888;
+    }
+
+	header {
+	  background: url("logo.png") no-repeat center center;
+	  background-size: 100% 100%;   /* stretch image fully to header */
+	  height: 150px;                /* adjust header height */
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: flex-end;    /* keep nav at bottom */
+	}
+
+    nav#topnav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(0,40,69,1);
+    }
+
+    nav#topnav a {
+      text-decoration: none;
+      font-size: 11pt;
+      color: white;
+    }
+
+    nav#topnav a:hover {
+      background-color: cyan;
+      border-radius: 0px;
+      transition: background-color 0.3s;
+      color: black;
+    }
+
+    #intro1 {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    #blurbg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-position: center;
+      background-size: cover;
+      filter: blur(0px);
+    }
+
+    #intro3 {
+      position: relative;
+      background-color: rgba(0,70,99,.75);
+      padding: 60px 4%;
+      text-align: center;
+    }
+
+	header h1 {
+	  margin: 0;                  
+	  padding: 60px;              
+	  font-size: 25px;            /* bigger for strong effect */
+	  text-align: center;         
+	  color: rgba(199, 150, 43, 1);   /* brownish-orange */         /* main text color */
+	  font-weight: bold;
+
+	  /* black edges (stroke) */
+	  -webkit-text-stroke: 1px black;
+
+	  /* shading (drop shadow) */
+	  /*text-shadow: 0px 0px 0px rgba(0, 0, 0);*/
+	}
+
+    a.btn {
+      background-color: rgba(12,12,12,.7);
+      color: #fff !important;
+      padding: 8px 20px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-size: 11pt;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    a.btn:hover {
+      background-color: cyan;
+      transition: background-color 0.3s;
+      color: #000 !important;
+    }
+
+    .boxwhite {
+      background-color: #e2e2e2;
+      padding: 30px;
+      text-align: center;
+    }
+
+    /* Contact form styles */
+    form.contact-form {
+      max-width: 940px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form.contact-form input,
+    form.contact-form textarea {
+      padding: 9px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      font-size: 10pt;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    form.contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+	  font-family: 'Arial';
+	  font-size: 10pt;
+    }
+
+    form.contact-form button {
+      background-color: rgba(12,12,12,.7);
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 9px;
+      font-size: 10pt;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form.contact-form button:hover {
+      background-color: cyan;
+      color: #000;
+    }
+
+    footer {
+      background: rgba(0,40,69,1);
+      padding: 50px;
+      font-size: 8pt;
+      text-align: center;
+      color: #668899;
+    }
+
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #668899;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 630px) {
+      h1 { font-size: 20pt; }
+      nav#topnav { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div id="outer-wrap">
+    <header>
+		<h1>PNG GRID LIMITED</h1>
+		  <nav id="topnav">
+			<a href="index.html">Home</a>
+			<a href="services.html">Services</a>
+			<a href="news.html">News</a>
+			<a href="contact.html">Contact</a>
+		  </nav>
+		</header>
+
+		<main>
+		  <div id="intro1">
+			<div id="blurbg" style="background-image:url('logoc.png');"></div>
+			<div id="intro3">
+			  <!--<h1>PNG Grid Limited</h1>-->
+			  <p>Powering Papua New Guinea with reliable consulting, energy, and infrastructure solutions.</p>
+			  <a class="btn" href="services.html">Explore Our Services</a>
+			</div>
+		  </div>
+	<div class="boxwhite">
+        <p>Send us a message and we will get back to you as soon as possible:</p>
+
+        <form class="contact-form" action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="subject" placeholder="Subject" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://www.facebook.com/YourPage" target="_blank" style="margin-right:10px; text-decoration:none;">Facebook</a>
+      <a href="https://wa.me/YourNumber" target="_blank" style="margin-right:10px; text-decoration:none;">WhatsApp</a>
+      <br>
+      © PNG Grid Limited, All Rights Reserved<br>
+      <a href="about.html">About Us</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="contact.html">Contact</a>
+    </footer>
+
+  </div>
+</body>
+</html>
